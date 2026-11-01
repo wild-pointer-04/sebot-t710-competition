@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<location>
+    <table name="餐桌-1">
+        <local position="-4.41312 0.938414 0" orientation="0 0 0.994652 -0.10328" />
+    </table>
+    <table name="餐桌-2">
+        <local position="-4.85736 3.36699 0" orientation="0 0 0.995911 -0.0903388" />
+    </table>
+    <serving name="取餐台">
+        <local position="-0.961181 2.6436 0" orientation="0 0 0.0973569 0.99525" />
+    </serving>
+    <origin name="起始点">
+        <local position="0.012296 -0.139459 0" orientation="0 0 0.0294428 0.999566" />
+    </origin>
+    <counter name="收银台">
+        <local position="-1.07371 5.30143 0" orientation="0 0 0.147563 0.989053" />
+    </counter>
+</location>

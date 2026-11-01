@@ -1,0 +1,4 @@
+<launch>
+  <!-- 启动机械臂控制节点 -->
+  <node pkg="sebot_talon" type="talon_simulation.py" name="talon_simulation"/>
+</launch>

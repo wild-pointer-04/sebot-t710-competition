@@ -1,0 +1,15 @@
+{
+    "[01] 手柄遥控机器人": "roslaunch sebot_robot sebot_joystick.launch",
+    "[02] 键盘遥控机器人": "roslaunch sebot_robot sebot_keyboard.launch",
+    "[03] 融合里程计实践": "roslaunch sebot_robot sebot_odom.launch",
+    "[04] 粒子滤波建图": "roslaunch sebot_slam sebot_gmapping.launch",
+    "[05] 优化轨迹建图": "roslaunch sebot_slam sebot_hector.launch",
+    "[06] 保存地图": "roslaunch sebot_slam sebot_map_save.launch",
+    "[07] 自主定位导航": "roslaunch sebot_navigation sebot_navigation.launch",
+    "[08] 粒子滤波定位仿真": "roslaunch sebot_simulator sebot_stdr_amcl.launch",
+    "[09] 粒子滤波建图仿真": "roslaunch sebot_simulator sebot_stdr_gmapping.launch",
+    "[10] 优化轨迹建图仿真": "roslaunch sebot_simulator sebot_stdr_hector.launch",
+    "[11] 自主定位导航仿真": "roslaunch sebot_simulator sebot_stdr_navigation.launch",
+    "[12] 机器人智能跟随": "python3 /root/workspace/sebot-t710-competition/sebot_ros_kits/src/sebot_follow/scripts/sebotFollow.py",
+    "All/关闭所有进程": "killall python3 camera_node sebot_music sebot_audio sebot_qtgui sebot_controller sebot_joy roslaunch rosrun gazebo_ros robot_state_publisher joint_state_publisher rviz map_server rplidarNode"
+}

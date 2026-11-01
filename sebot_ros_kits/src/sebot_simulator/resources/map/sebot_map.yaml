@@ -1,0 +1,8 @@
+image: sebot_map.png      # 地图文件名称
+resolution: 0.003         # 地图分辨率：米/像素
+origin: [0.5, 0.5, 0.0]   # 地图初始位置
+occupied_thresh: 0.6      # 障碍物阈值
+free_thresh: 0.3          # 空闲区域阈值
+negate: 0                 # 是否黑白反转
+
+

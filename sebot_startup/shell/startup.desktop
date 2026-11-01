@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=快捷启动
+Comment=快捷启动程序
+Exec=/root/workspace/sebot-t710-competition/sebot_startup/build-sebot-Desktop-Release/sebot
+Icon=/root/workspace/sebot-t710-competition/sebot_startup/shell/robot.png
+StartupNotify=true
+Terminal=false

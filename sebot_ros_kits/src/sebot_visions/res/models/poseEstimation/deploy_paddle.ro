@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "image", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "tvmgen_default_fused__copy", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused__copy", 
+        "hash": "c085348e6e6f806a"
+      }, 
+      "inputs": [
+        [
+          0, 
+          0, 
+          0
+        ]
+      ]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "tvmgen_default_nna_main_0", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_nna_main_0"
+      }, 
+      "inputs": [
+        [
+          1, 
+          0, 
+          0
+        ]
+      ]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "tvmgen_default_fused__copy_1", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused__copy_1", 
+        "hash": "b59b31d53b5b26b8"
+      }, 
+      "inputs": [
+        [
+          2, 
+          0, 
+          0
+        ]
+      ]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "tvmgen_default_fused__copy_11", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused__copy_1", 
+        "hash": "b59b31d53b5b26b8"
+      }, 
+      "inputs": [
+        [
+          2, 
+          0, 
+          0
+        ]
+      ]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "reshape_nop", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "__nop", 
+        "hash": "a32d31136c9fc16f"
+      }, 
+      "inputs": [
+        [
+          4, 
+          0, 
+          0
+        ]
+      ]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "tvmgen_default_fused_argmax", 
+      "attrs": {
+        "num_outputs": "1", 
+        "num_inputs": "1", 
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_argmax", 
+        "hash": "d4fb80acf67e0a95"
+      }, 
+      "inputs": [
+        [
+          5, 
+          0, 
+          0
+        ]
+      ]
+    }
+  ], 
+  "arg_nodes": [0], 
+  "heads": [
+    [
+      3, 
+      0, 
+      0
+    ], 
+    [
+      6, 
+      0, 
+      0
+    ]
+  ], 
+  "attrs": {
+    "dltype": [
+      "list_str", 
+      [
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "int32"
+      ]
+    ], 
+    "device_index": [
+      "list_int", 
+      [1, 17, 17, 1, 1, 1, 1]
+    ], 
+    "storage_id": [
+      "list_int", 
+      [0, 1, 2, 3, 4, 4, 5]
+    ], 
+    "shape": [
+      "list_shape", 
+      [
+        [1, 3, 256, 192], 
+        [1, 3, 256, 192], 
+        [1, 17, 64, 48], 
+        [1, 17, 64, 48], 
+        [1, 17, 64, 48], 
+        [1, 17, 3072], 
+        [1, 17]
+      ]
+    ]
+  }, 
+  "node_row_ptr": [0, 1, 2, 3, 4, 5, 6, 7]
+}

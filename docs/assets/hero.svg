@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="SEBOT T710: Perception, Navigation and Manipulation">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1224"/><stop offset="1" stop-color="#142d43"/></linearGradient>
+ <linearGradient id="accent"><stop stop-color="#52e0cc"/><stop offset="1" stop-color="#71aaff"/></linearGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#89b7d5" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1280" height="440" rx="24" fill="url(#bg)"/>
+<rect width="1280" height="440" rx="24" fill="url(#grid)"/>
+<path d="M0 1H1280" stroke="url(#accent)" stroke-width="4"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<rect x="58" y="46" width="248" height="30" rx="15" fill="#52e0cc" fill-opacity=".12" stroke="#52e0cc" stroke-opacity=".35"/>
+<text x="76" y="66" fill="#7de8d8" font-size="12" letter-spacing="2">EMBODIED ROBOTICS / T710</text>
+<text x="54" y="151" fill="#f1f6ff" font-weight="700" font-size="64" letter-spacing="1">SEBOT T710</text>
+<text x="59" y="191" fill="#b1c9de" font-size="24" letter-spacing="3">AUTONOMOUS SERVICE ROBOT</text>
+<text x="59" y="238" fill="#90a9bf" font-size="17">From visual perception to purposeful physical action.</text>
+<g fill="#dfedf8" font-size="13" letter-spacing="1">
+<rect x="59" y="287" width="136" height="38" rx="7" fill="#182e43" stroke="#345169"/><text x="82" y="311">PERCEPTION</text>
+<rect x="207" y="287" width="142" height="38" rx="7" fill="#182e43" stroke="#345169"/><text x="230" y="311">NAVIGATION</text>
+<rect x="361" y="287" width="166" height="38" rx="7" fill="#182e43" stroke="#345169"/><text x="382" y="311">MANIPULATION</text>
+</g>
+<text x="59" y="386" fill="#6e8da6" font-size="13" letter-spacing="2">C++  /  ROS  /  SLAM  /  YOLO  /  EDGE AI</text>
+<g transform="translate(950 216)">
+<circle r="153" fill="none" stroke="#547e9e" stroke-opacity=".25"/>
+<circle r="119" fill="none" stroke="#60b8d4" stroke-opacity=".3" stroke-dasharray="5 9"/>
+<path d="M-170 100L-109 100L-78 69H-24L24 21H90L145-34" fill="none" stroke="url(#accent)" stroke-width="3"/>
+<circle cx="145" cy="-34" r="8" fill="#5ce4cf"/>
+<rect x="-60" y="-67" width="120" height="141" rx="22" fill="#172d43" stroke="#86c4df" stroke-width="2"/>
+<rect x="-44" y="-49" width="88" height="51" rx="10" fill="#0a1a2a"/>
+<circle cx="-20" cy="-24" r="6" fill="#5ce4cf"/><circle cx="20" cy="-24" r="6" fill="#5ce4cf"/>
+<path d="M-24 25H24M-24 40H10" stroke="#638da8" stroke-width="3" stroke-linecap="round"/>
+<rect x="-78" y="48" width="19" height="39" rx="8" fill="#324d68"/><rect x="59" y="48" width="19" height="39" rx="8" fill="#324d68"/>
+<path d="M60 15L102-19L82-61" fill="none" stroke="#9cbddb" stroke-width="9" stroke-linecap="round"/>
+<circle cx="102" cy="-19" r="8" fill="#5ce4cf"/>
+<path d="M82-61L70-76M82-61L92-77" fill="none" stroke="#9cbddb" stroke-width="5" stroke-linecap="round"/>
+<path d="M-28-84Q0-106 28-84M-43-101Q0-131 43-101" fill="none" stroke="#5ce4cf" stroke-width="2" opacity=".65"/>
+</g>
+<text x="810" y="406" fill="#6e8da6" font-size="11" letter-spacing="2">SENSE  →  PLAN  →  ACT  →  ADAPT</text>
+</g></svg>

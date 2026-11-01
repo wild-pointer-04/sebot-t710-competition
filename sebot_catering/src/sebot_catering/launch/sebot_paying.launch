@@ -1,0 +1,9 @@
+
+<launch>
+
+  <!-- 智能结算场景 -->
+  <node pkg="sebot_catering" type="sebot_paying" name="sebot_paying" output="screen" respawn="true">
+    <param name="sizeOrder"  value="1"/>   <!-- 订单数量 -->
+  </node>
+  
+</launch>

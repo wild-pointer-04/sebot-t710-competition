@@ -1,0 +1,5 @@
+{
+    "mode": "professional",
+    "model_dir": "/root/workspace/sebot-t710-competition/sebot_catering/src/sebot_catering/res/model",
+    "model_file": "deploy_paddle"
+}

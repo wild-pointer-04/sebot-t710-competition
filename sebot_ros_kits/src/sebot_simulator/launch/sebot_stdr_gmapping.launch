@@ -1,0 +1,19 @@
+<!-- 使用stdr的仿真进行gmapping建图 -->
+<launch>     
+
+  <!-- 开启stdr仿真器 -->
+  <include file = "$(find sebot_simulator)/launch/sebot_stdr_gui.launch" />
+  
+  <!-- 启动RVIZ监视器 -->
+  <node name = "rviz" pkg  = "rviz" type = "rviz" args = "-d $(find sebot_simulator)/rviz/slam.rviz" respawn="true"/>
+
+  <!-- 启动gmapping建图算法 -->
+  <include file="$(find sebot_slam)/param/gmapping.xml">
+    <arg name="map_topic" value="/slam_map" /> <!-- 发布的地图话题名称(map_topic),防止和stdr发布的地图名称重叠 -->
+    <arg name="odom_frame" value="map_static" />  
+  </include>
+  
+  <!-- 启动遥控手柄控制节点 -->
+  <node pkg="sebot_robot" type="sebot_joystick" name="sebot_joystick" respawn="true"/>
+
+</launch>

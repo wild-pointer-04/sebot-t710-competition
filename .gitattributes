@@ -1,0 +1,21 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.launch text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.tar binary
+*.so binary
+*.o binary
+*.ro binary
+*.params binary
+*.onnx binary
+*.pgm binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.ttf binary

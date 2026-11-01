@@ -1,0 +1,34 @@
+<!-- 使用stdr的仿真进行gmapping建图 -->
+<launch>     
+	<!-- 开启stdr仿真器 -->
+	<include file = "$(find sebot_simulator)/launch/sebot_stdr_gui.launch" />
+
+	<!-- 启动move_base节点 -->
+	<include file = "$(find sebot_navigation)/param/move_base.xml">
+		<arg name="odom_frame_id"   default="map_static"/>
+		<arg name="map_topic"       default="/slam_map"/>
+	</include>
+
+	<!-- 启动gmapping建图算法 -->
+	<include file="$(find sebot_slam)/param/gmapping.xml">
+		<arg name="map_topic" value="/slam_map" /> <!-- 发布的地图话题名称(map_topic),防止和stdr发布的地图名称重叠 -->
+		<arg name="odom_frame" value="map_static" />  
+	</include>
+
+	<!-- 启动RVIZ监视器 -->
+	<node name = "rviz" pkg  = "rviz" type = "rviz" args = "-d $(find sebot_simulator)/rviz/autoslam.rviz" respawn="true"/>
+	
+	<!-- 启动自主建图 -->
+	<include file = "$(find sebot_slam)/param/auto_slam.xml">
+		<arg name="map_topic"     	    value="slam_map"/>   <!-- 地图话题名称 -->
+		<arg name="global_frame"     	value="map_static"/> <!-- 机器人参考坐标系名称，如map，odom -->
+		<arg name="debug"           	value="false"/>      <!-- 是否打印debug信息 -->
+		<arg name="audio"           	value="true"/>       <!-- 是否语音播报 -->
+		<arg name="visualize"       	value="true"/>       <!-- 指定是否发布在rviz上显示的可视化边界 -->
+	</include>
+
+	<!-- 启动语音播报 -->
+	<include file = "$(find sebot_speech)/launch/sebot_audio.xml"/>
+	
+</launch>
+

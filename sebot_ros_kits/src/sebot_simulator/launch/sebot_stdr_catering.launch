@@ -1,0 +1,41 @@
+
+<!-- STDR智能餐饮服务仿真 -->
+<launch>
+
+  <!-- 启动语音播报任务 -->
+  <node pkg="sebot_speech" type="sebot_audio.py" name="sebot_audio" respawn="true" />
+  
+  <!-- 开启stdr仿真器 -->
+  <include file = "$(find sebot_simulator)/launch/sebot_stdr_gui.launch" />
+  
+  <!-- 加载仿真地图 -->
+  <node pkg="map_server" type="map_server" name="stdr_load_map" args="$(find sebot_simulator)/resources/map/sebot_match.yaml" respawn="true">
+    <remap from="map" to="/amcl/map" />
+  </node>
+
+  <!-- 启动蒙特卡洛定位算法 -->
+  <include file="$(find sebot_navigation)/param/amcl.xml">
+    <arg name="odom_frame_id" value="map_static"/>
+    <arg name="map" value="/amcl/map"/>
+    <arg name="init_pose_x" value="1.0"/>       <!-- 机器人初始化姿态：仿真与实际差异 -->
+    <arg name="init_pose_y" value="1.0"/>       <!-- 机器人初始化姿态：仿真与实际差异 -->
+    <arg name="init_pose_a" value="1.57"/>      <!-- 机器人初始化姿态：仿真与实际差异(角度rad) -->
+  </include>
+
+  <!-- 启动move_base节点 -->
+  <include file = "$(find sebot_navigation)/param/move_base.xml">
+    <arg name="odom_frame_id"   default="map_static"/>
+    <arg name="map_topic"       default="/amcl/map"/>
+  </include>
+
+  <!-- 启动RVIZ监视器 -->
+  <node name = "rviz" pkg  = "rviz" type = "rviz" args = "-d $(find sebot_simulator)/rviz/navigation.rviz" respawn="true"/>
+
+  <!-- 启动智能餐饮服务 -->
+  <node pkg="sebot_catering" type="sebot_catering" name="sebot_catering" respawn="true">
+    <param name="delayStart"  type="int"  value="10"/>     <!-- 程序启动延时（s），等待其它节点正常启动 -->
+    <param name="timeoutNavi" type="int"  value="5000"/>   <!-- 导航超时时间：ms -->
+    <param name="simulation" type="bool"  value="true"/>   <!-- STDR仿真模式使能 -->
+  </node>
+  
+</launch>

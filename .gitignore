@@ -1,0 +1,33 @@
+# ROS / catkin build products
+**/build/
+**/devel/
+**/install/
+**/log/
+**/logs/
+**/build-*/
+**/.catkin_tools/
+**/.catkin_workspace
+**/CMakeFiles/
+**/CMakeCache.txt
+**/compile_commands.json
+
+# Editor and Python cache
+.vscode/
+.idea/
+*.pro.user
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Local credentials and recordings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+sebot_ros_kits/src/sebot_speech/res/audio/record/*
+sebot_ros_kits/src/sebot_speech/res/audio/tts/*
+!**/.gitkeep
+
+# Model .so/.o/.tar files are required T710 runtime assets: keep them tracked.

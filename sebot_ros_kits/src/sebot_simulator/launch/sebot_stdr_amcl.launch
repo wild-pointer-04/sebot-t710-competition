@@ -1,0 +1,27 @@
+<!-- 基于自适应蒙特卡洛定位(AMCL)仿真 -->
+<launch>
+
+  <!-- 开启stdr仿真器 -->
+  <include file = "$(find sebot_simulator)/launch/sebot_stdr_gui.launch" />
+
+  <!-- 启动RVIZ监视器 -->
+  <node name = "rviz" pkg  = "rviz" type = "rviz" args = "-d $(find sebot_simulator)/rviz/amcl.rviz" respawn="true"/>
+
+  <!-- 加载仿真地图 -->
+  <node pkg="map_server" type="map_server" name="stdr_load_map" args="$(find sebot_simulator)/resources/map/sebot_match.yaml">
+    <remap from="map" to="/amcl/map" />
+  </node>
+
+  <!-- 启动蒙特卡洛定位算法 -->
+  <include file="$(find sebot_navigation)/param/amcl.xml">
+    <arg name="odom_frame_id" value="map_static"/>
+    <arg name="map" value="/amcl/map"/>
+    <arg name="init_pose_x" value="1.2"/>       <!-- 机器人初始化姿态：仿真与实际差异 -->
+    <arg name="init_pose_y" value="1.2"/>       <!-- 机器人初始化姿态：仿真与实际差异 -->
+    <arg name="init_pose_a" value="1.57"/>       <!-- 机器人初始化姿态：仿真与实际差异(角度rad) -->
+  </include>
+
+  <!-- 启动遥控手柄控制节点 -->
+  <node pkg="sebot_robot" type="sebot_joystick" name="sebot_joystick" respawn="true"/>
+
+</launch>
