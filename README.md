@@ -126,7 +126,7 @@ START → POSE → SEARCH → FORWARD → AIM → GRAB → LOCAL → END
 
 ## 项目成果与扩展
 
-**项目技术栈：C++ · ROS2 · A* · TEB · SLAM · YOLO · OpenCV · Docker**
+**项目技术栈：C++ · ROS2 · A\* · TEB · SLAM · YOLO · OpenCV · Docker**
 
 项目在 T710 基础工程之上，围绕端侧视觉、移动导航与学习型操作形成三条技术主线。
 

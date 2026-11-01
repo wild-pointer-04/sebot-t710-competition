@@ -52,7 +52,7 @@ These commands were derived from the source tree and have not been validated on 
 
 ## Project results and extensions
 
-**Project stack: C++ · ROS2 · A* · TEB · SLAM · YOLO · OpenCV · Docker**
+**Project stack: C++ · ROS2 · A\* · TEB · SLAM · YOLO · OpenCV · Docker**
 
 - **Model optimization and deployment:** trained YOLO detectors with PaddlePaddle, applied structured pruning and inference acceleration, and containerized algorithms with Docker to improve inference efficiency and cross-platform deployment.
 - **Autonomous navigation:** built environment maps with SLAM, developed an improved A* global planner, and combined it with TEB local planning for dynamic trajectory optimization, localization, navigation and obstacle avoidance under ROS2.
