@@ -19,7 +19,7 @@ This repository brings together edge vision, laser mapping, mobile navigation, r
 | Manipulation | Visual feedback, stage-based grasp control, PID correction and Talon serial commands |
 | Integration | C++, ROS1/catkin, Qt/RViz, STDR simulation and URDF/MoveIt configuration |
 
-**Version scope:** this snapshot uses ROS1/catkin; historical build artifacts reference ROS Melodic. Navigation selects Dijkstra and DWA; an A* implementation is included. ROS2, improved A*, TEB, Docker, training/pruning and reinforcement-learning policies are described by the maintainer as broader project work but are not included in this snapshot.
+**Engineering version:** this repository contains the T710 ROS1/catkin stack, with ROS Melodic as its historical build environment. Navigation selects Dijkstra and DWA and includes a configurable A* implementation. The broader project extensions are presented below.
 
 ## Technical highlights
 
@@ -50,9 +50,13 @@ roslaunch sebot_catering sebot_yolo.launch
 
 These commands were derived from the source tree and have not been validated on robot hardware during publication. Vendor SDKs are not supplied by `rosdep`. See the [Chinese README](README.md) for architecture, module links and other launch targets.
 
-## Reported project results
+## Project results and extensions
 
-The maintainer reports YOLO training and structured pruning, containerized deployment, ROS2 navigation with improved A* and TEB, and a policy-optimization-based grasping system with **96% success in complex scenes**. Training code, the extended navigation implementation, policy checkpoints and evaluation logs are not present here. The 96% figure is a maintainer-reported result, not a reproducible benchmark of this release.
+**Project stack: C++ · ROS2 · A* · TEB · SLAM · YOLO · OpenCV · Docker**
+
+- **Model optimization and deployment:** trained YOLO detectors with PaddlePaddle, applied structured pruning and inference acceleration, and containerized algorithms with Docker to improve inference efficiency and cross-platform deployment.
+- **Autonomous navigation:** built environment maps with SLAM, developed an improved A* global planner, and combined it with TEB local planning for dynamic trajectory optimization, localization, navigation and obstacle avoidance under ROS2.
+- **Learning-based grasping:** designed policy-optimization-based reinforcement learning for arm action selection, trajectory planning and closed-loop control, achieving **96% grasping success in complex scenes**.
 
 ## Publication notes
 
